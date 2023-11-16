@@ -1,11 +1,10 @@
 /********************************************************************
- * Programmer:	sveinson
+ * Programmer:    Aarya
  * Class:  CS30S
  *
- * Assignment: Program Info Exericse
+ * Assignment: Programinfo Class
  *
- * Description: creates a program info object to print banners and closing messages
- *              to console, JOptionPane and output file
+ * Description: OOP Intro Exercise ProgramInfo Class
  ***********************************************************************/
 
 // import libraries as needed here
@@ -13,82 +12,62 @@
 public class ProgramInfo {
     //*** Class Variables ***
     
+    final static String nl = System.lineSeparator();
+    
     //*** Instance Variables ***
     
-    private String assignmentName = "";
+    private String assignment = "";
     
-    //*** Construcors ***
-    
-    /*****************************************
-    * Description: create a new ProgramInfo object with the assignment
-    *               property set to appropriate value
-    * 
-    * Interface:
-    * 
-    * @param        assignmentName  assignment name and number
-    * ****************************************/
-    public ProgramInfo(String name){
-        assignmentName = name;
-    } // end initialized constructor
-    
-    /*****************************************
-    * Description: create a new dsefault ProgramInfo object
-    * 
-    * Interface:
-    * none
-    * ****************************************/
+    //*** Constructors ***
+    //defult constructor
     public ProgramInfo(){
-        
-    } // end default constructor
+    }//end defult
+    //initialized constructor
+    public ProgramInfo(String name){
+        assignment = name;
+    }//end initialized
+    
+    /*****************************************
+    * Description: brief description of the methods purpose
+    * 
+    * Interface:
+    * 
+    * @param        each parameter of the method should be listed with an @param
+    * @param        parametername description of parameter
+    * 
+    * @return       any return value will be noted here
+    * ****************************************/
+    
     //*** Getters ***
-    
     /*****************************************
-    * Description: create and return a string for the program info banner
+    * Description: return string
     * 
     * Interface:
-    * 
-    * @return bannerOut  string containing the program info banner
-    * ****************************************/ 
+    * @return       Banner String
+    * ****************************************/
+    
     public String getBanner(){
-        String bannerOut = "";
+        String outputBanner = "";
         
-    	bannerOut = "*******************************************\n";
-    	bannerOut += "Name:		sveinson\n";
-    	bannerOut += "Class:		CS30S\n";
-    	bannerOut += "Assignment:	" + assignmentName + "\n";
-    	bannerOut += "*******************************************\n\n"; 
+        outputBanner = "*******************************************\n";
+        outputBanner += "Name:		Aarya\n";
+        outputBanner += "Class:		CS30S\n";
+        outputBanner += "Assignment:	" + assignment;
+        outputBanner += "    \n";
+        outputBanner += "*******************************************\n";
         
-        return bannerOut;
-    } // end getBanner
+        return outputBanner;
+    }//end get 
     
     /*****************************************
-    * Description: create and return a string for the program info banner
+    * Description: return string for closing message and create string for closing message
     * 
     * Interface:
-    * @param assignmentName name of assignment for banner
-    * @return bannerOut  string containing the program info banner
-    * ****************************************/ 
-    public String getBanner(String assignmentName){
-        String bannerOut = "";
-        
-    	bannerOut = "*******************************************\n";
-    	bannerOut += "Name:		sveinson\n";
-    	bannerOut += "Class:		CS30S\n";
-    	bannerOut += "Assignment:	" + assignmentName + "\n";
-    	bannerOut += "*******************************************\n\n"; 
-        
-        return bannerOut;
-    } // end getBanner
+    * @return       closingMessage String
+    * ****************************************/
     
-    /*****************************************
-    * Description: create and return a string for the closing message
-    * 
-    * Interface:
-    * 
-    * @return closingMessage  string containing the closing message
-    * ****************************************/ 
-    public String getClosingMessage(){
-    	return "end of processing";
+    public String getclosingMessage(){
+        return "end of proccesing";
     }
     
     //*** Setters ***

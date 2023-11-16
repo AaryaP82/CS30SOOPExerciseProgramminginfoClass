@@ -4,7 +4,7 @@ import java.io.*;
 import java.text.NumberFormat;
 
 /** ***************************************************
- *  Name:           Sveinson
+ *  Name:           Aarya
  *  Class:          CS30S
  * 
  *  Assignment:     Ax Qy
@@ -33,7 +33,7 @@ public class ClientTemplate {
         // a new line character that works on every computer system
 
         // ***** objects *****
-        ProgramInfo pInfo = new ProgramInfo("Ax Qy");
+        ProgramInfo pInfo = new ProgramInfo("OOP Intro Exercise ProgramInfo Class");
         //Scanner scanner = new Scanner(System.in);
         //NumberFormat currency = NumberFormat.getCurrencyInstance();
 
@@ -56,7 +56,7 @@ public class ClientTemplate {
         // ***** Closing Message *****
 
         System.out.println();
-        System.out.println(pInfo.getClosingMessage());
+        System.out.println(pInfo.getclosingMessage());
         //fout.println("End of Processing");
 
         // **** close io buffers *****
